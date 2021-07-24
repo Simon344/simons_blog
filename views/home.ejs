@@ -3,9 +3,9 @@
 <h1>Home</h1>
 <p> <%= homeStartingContent %> </p>
 
-<% allPosts.forEach(element => { %>
+<% allPosts.forEach(function(element){ %>
     <h1> <%= element.title %> </h1>
-    <p> <%= element.body.substring(0, 99) + "..." %> <a href="/posts/<%= element.title %> ">Read More</a></p>
+    <p> <%= element.content.substring(0, 99) + "..." %> <a href="/posts/<%= element._id %> ">Read More</a></p>
 <% }) %>
 
 <% include partials/footer.ejs %>
