@@ -63,6 +63,7 @@ app.post("/compose", function(req, res){
         });
         newPost.save();
         console.log("Successfully created " + newTitle + " post");
+        res.redirect("/");
       } else{
         console.log(newTitle + " post already exists");
       }
